@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!--    //Reference for inputs -->
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="258dp"
+        android:layout_height="46dp"
+        android:hint="Guess a four letter word"
+        android:maxLength="4"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guess_label" />
+
+<!--   Reference the guess button -->
+    <Button
+        android:id="@+id/guess_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guess_label" />
+
+<!--    Hardcoded TextView places-->
+    <TextView
+        android:id="@+id/guess_label"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:text="Guess#1 Check#1
+        Guess#2   Check#2
+        Guess#3     Check#3"
+        android:textSize="40dp"
+        android:typeface="normal"
+        android:lineSpacingMultiplier="2.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    Reference for the user's guesses-->
+    <TextView
+        android:id="@+id/user_guesses"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="2.0"
+        android:text=""
+        android:textSize="40dp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    reference for the correct answer -->
+    <TextView
+        android:id="@+id/correct_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correct word was: "
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input" />
+
+<!--    This is the button for when the guesses are up-->
+    <Button
+        android:id="@+id/resetbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guess_label" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
